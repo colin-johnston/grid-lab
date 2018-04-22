@@ -1,0 +1,21 @@
+{
+  "name": "grid-lab",
+  "version": "0.1.0",
+  "description": "Experimental CSS Grid Layouts & Techniques",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/neoterica/grid-lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/neoterica/grid-lab#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.7",
+    "gulp": "^3.9.1",
+    "gulp-connect-php": "^1.0.3"
+  }
+}
