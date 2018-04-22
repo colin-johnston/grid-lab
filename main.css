@@ -1,6 +1,53 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|IBM+Plex+Sans:400,400i,700,700i');
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 2em;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #fff;
+}
+
+h1, h2 {
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+h1 {
+  margin-bottom: 1.5em;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+h2 a {
+  text-decoration: none;
+}
+
+p {
+  max-width: 70ch;
+}
+
+li:not(:first-of-type) {
+  margin-top: 2.5em;
+}
+
 li {
   list-style: none;
+}
+
+
+.code__inline {
+  color: #424549;
+  border: 1px solid silver;
+  background-color: #e9f1f8;
+  border-radius: 3px;
+  padding: 1px 3px;
+  position: relative;
+  top: -0.125em;
 }
