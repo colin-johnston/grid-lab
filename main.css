@@ -51,3 +51,29 @@ li {
   position: relative;
   top: -0.125em;
 }
+
+/* grid */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 16px;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+
+.content {
+  grid-column-start: 3;
+  grid-column-end: span 6;
+}
+
+.sidebar {
+  grid-column-start: 9;
+  grid-column-end: span 4;
+}
+
+
+
