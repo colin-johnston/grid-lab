@@ -75,21 +75,3 @@ a {
 
 
 
-/* for demo purposes */
-
-.wrapper > * {
-  background-color: #999;
-  border-radius: 5px;
-  color: #fff;
-  padding: 1.5em;
-  margin-bottom: 1em;
-}
-
-.content {
-  background-color: #fff;
-  border-radius: 0;
-  color: #999;
-  padding: 0;
-  font-size: 1.25em;
-  line-height: 1.4;
-}

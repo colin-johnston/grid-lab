@@ -42,26 +42,6 @@ body {
 }
 
 
-/* for demo purposes */
-
-.wrapper > * {
-    background-color: #999;
-    border-radius: 5px;
-    color: #fff;
-    padding: 1.5em;
-    margin-bottom: 1em;
-}
-
-.main {
-    background-color: #fff;
-    border-radius: 0;
-    color: #999;
-    padding: 0;
-    font-size: 1.25em;
-    line-height: 1.4;
-}
-
-
 /* set widths on floated items back to 0 and remove bottom margin since grid has gaps */
 
 @supports (display: grid) {
