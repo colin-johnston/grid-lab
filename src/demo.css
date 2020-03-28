@@ -1,0 +1,18 @@
+/* grid-lab global demo styles */
+
+.wrapper > * {
+  background-color: #767676;
+  border-radius: 5px;
+  color: #fff;
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+
+.content {
+  background-color: #fff;
+  border-radius: 0;
+  color: #767676;
+  padding: 0;
+  font-size: 1.25em;
+  line-height: 1.4;
+}

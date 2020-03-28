@@ -1,0 +1,52 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 2em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    background-color: #fff;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 1em;
+    display: grid;
+    grid-gap: 1em 2em;
+}
+
+@media screen and (min-width: 48em) {
+    /* no-grid fallback */
+    .sidebar {
+        grid-row: 2;
+        float: left;
+        width: 20%;
+    }
+    .main {
+        grid-column: 2 / -1;
+        float: right;
+        width: 80%;
+    }
+    .wrapper {
+        margin: 0 auto;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .header,
+    .footer {
+        grid-column: 1 / -1;
+        /* for no-grid fallback */
+        clear: both;
+    }
+}
+
+
+/* set widths on floated items back to 0 and remove bottom margin since grid has gaps */
+
+@supports (display: grid) {
+    .wrapper > * {
+        width: auto;
+        margin-bottom: 0;
+    }
+}

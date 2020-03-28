@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|IBM+Plex+Sans:400,400i,700,700i');
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 2em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #fff;
+}
+
+h1, h2 {
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+a {
+  color: inherit;
+}
+/* What we're working on here: https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-navigation-with-css-grid--cms-28191*/
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .wrapper header,
+  .wrapper nav,
+  .wrapper footer {
+    grid-column: span 4;
+  }
+  .wrapper .content {
+    grid-column: span 3;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding: 0 20px 0 0;
+  }
+
+  .toggle {
+    display: none;
+  }
+}
+
+
+/* off-screen nav for smaller viewports */
+
+@media (max-width: 599px) {
+  #nav {
+    position: fixed; /* or choose absolute depending on desired behavior */
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    left: -340px;
+    transition: transform .3s ease-in-out; /* transform is more performant than position */
+  }
+
+  /* :target fragment identifier trick */
+  #nav:target {
+    transform: translateX(340px);
+  }
+}
+
+
+
+
+
+
