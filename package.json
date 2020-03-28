@@ -14,8 +14,8 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/neoterica/grid-lab#readme",
   "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
     "browser-sync": "^2.23.7",
-    "gulp": "^3.9.1",
-    "gulp-connect-php": "^1.0.3"
+    "gulp": "^3.9.1"
   }
 }
