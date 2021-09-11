@@ -12,8 +12,6 @@ const browsersync = require('browser-sync');
 // const paths = {
 // }
 
-// var reload = browserSync.reload;
-
 // function serve(cb) {
 //   connect.server({}, function (){
 //     browsersync.init({
@@ -23,13 +21,21 @@ const browsersync = require('browser-sync');
 //   cb();
 // }
 
+// CSS
+// placeholder css function 
+function css(cb) {
+  cb();
+}
+
+// RELOAD
 function reload(cb){
   browsersync.reload();
   cb();
 }
 
+// WATCH
 const watchCSS = () => gulp.watch('./**/*.css', reload);
-// const watchNJK = () => gulp.watch('./**/*.njk', reload);
 
-const dev = gulp.series(serve, watchCSS);
+//DEFAULT TASK
+const dev = gulp.series(css, watchCSS);
 exports.default = dev;
