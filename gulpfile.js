@@ -1,15 +1,35 @@
 
-var gulp        = require('gulp'),
-    connect     = require('gulp-connect-php'),
-    browserSync = require('browser-sync');
+const gulp        = require('gulp');
 
-var reload = browserSync.reload;
+// const connect     = require('gulp-connect-php');
+const browsersync = require('browser-sync');
 
-gulp.task('serve', function() {
-  connect.server({}, function (){
-    browserSync({
-      proxy: '127.0.0.1:8000'
-    });
-  });
-  gulp.watch(['**/*.php', '**/*.html', '**/*.css']).on('change', reload);
-});
+// const configs = {
+//   src: 'src/',
+//   dist: 'dist/'
+// }
+
+// const paths = {
+// }
+
+// var reload = browserSync.reload;
+
+// function serve(cb) {
+//   connect.server({}, function (){
+//     browsersync.init({
+//       proxy: '127.0.0.1:8000'
+//     });
+//   });
+//   cb();
+// }
+
+function reload(cb){
+  browsersync.reload();
+  cb();
+}
+
+const watchCSS = () => gulp.watch('./**/*.css', reload);
+// const watchNJK = () => gulp.watch('./**/*.njk', reload);
+
+const dev = gulp.series(serve, watchCSS);
+exports.default = dev;
